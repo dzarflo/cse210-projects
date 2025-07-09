@@ -1,6 +1,7 @@
 Version Control is a system that tracks the history of changes developers make when working on a project. 
-This helps developers stay aligned as a team working towards a goal by making the team know what change was made, when the change was made, 
-who made the change, and why the change was made. An example will be to correct a grammatical error. Since the error will affect the work of the 
-other developers, it is good practice to let the other members of the team know the error and the changes that have been made. 
-This helps the team know the particular point to continue a project from and the areas where changes need to be made on their sides.
-The 'git status' command is used in knowing the state of a directory. This helps developers know if their changes have been named, commited or pushed.
+This helps developers stay aligned as a team working towards a goal by making the team know what change was made, when the change was made, who made the change, 
+and why the change was made. An example will be to correct a grammatical error. Since the error will affect the work of the 
+other developers, it is good practice to let the other members of the team know the error and the changes that have been made. This is where version control comes in
+to make the change known to the other team members.
+This helps the team know the particular point to continue a project from and the areas where changes need to be made on their side.
+The 'git status' command is used to determine the state of a directory. This helps developers know if their changes have been named, committed, or pushed. And if they will need to take other actions.
