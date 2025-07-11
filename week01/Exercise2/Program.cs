@@ -47,7 +47,7 @@ class Program
 
         int lastDigit = (grade % 10);
 
-        if ( lastDigit >= 7)
+        if (lastDigit >= 7)
         {
             sign = "+";
         }
