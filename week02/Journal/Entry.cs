@@ -1,12 +1,12 @@
-// Hint: This is the public class NewEntry syntax
+// Hint: This is the public class Entry syntax
 
-public class NewEntry
+public class Entry
 {
     public string _date = "";
     public string _prompt = "";
     public string _response = "";
 
-    public NewEntry()
+    public Entry()
     {
     }
 

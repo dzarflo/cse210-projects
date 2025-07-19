@@ -1,4 +1,6 @@
+// added code an extra prompt
 using System;
+
 
 class Program
 {
@@ -36,7 +38,7 @@ class Program
 
             if (input == 1)
             {
-                NewEntry entry1 = new NewEntry();
+                Entry entry1 = new Entry();
 
                 DateTime theCurrentTime = DateTime.Now;
                 string dateText = theCurrentTime.ToShortDateString();
@@ -48,6 +50,8 @@ class Program
 
                 Console.Write("> ");
                 entry1._response = Console.ReadLine();
+
+                Journal 
             }
         }
 
