@@ -1,0 +1,38 @@
+Abstraction is the process of simplifying complex ideas into simple ones.
+In other words, it is the break down of characteristics of an idea that make it complex and considering the essential characteristics.
+An example is the first and seconnd commandmet which is an embodiment of the 10 commandmet.
+Abstraction makes a complex idea look simple by providing the essential details to make the idea manifest.
+An example of the application of abstracrtion is the application of the "input" function in python. The function has gone through a simplification of complex codes to 
+get to the basic point where it takes an input without considering the other complex codes that make it usable.
+In my code, I used the "PromptGenerator Class" to attain a random prompt from a number of provided prompts.
+It looked as below;
+public class PromptGenerator
+{
+    public List<string> _prompts = new List<string>();
+
+    public string GetRandomPrompt()
+
+    {
+        _prompts.Add("Who was the most interesting person I interacted with today?");
+        _prompts.Add("What was the best part of my day?");
+        _prompts.Add("How did I see the hand of the Lord in my life today?");
+        _prompts.Add("What was the strongest emotion I felt today?");
+        _prompts.Add("If I had one thing I could do over today, what would it be?");
+        _prompts.Add("What did I achieve today?");
+        _prompts.Add("How did I help someone today?");
+
+        Random randomGenerator = new Random();
+        int _randomNumber = randomGenerator.Next(0, 6);
+
+        string line = _prompts[_randomNumber];
+
+        Entry anEntry = new Entry();
+        anEntry._promptText = line;
+
+        return line;
+    }
+}
+Throgh abstracrtion i was able to use the essential aspect of the code of lines without the complex lines.
+In using it, it looked like this, as below;
+(newEntry._promptText = aPrompt.GetRandomPrompt();)
+
