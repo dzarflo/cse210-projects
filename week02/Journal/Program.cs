@@ -1,5 +1,6 @@
 // added code an extra prompt
 using System;
+using System.Collections.Generic;
 
 
 class Program
@@ -8,16 +9,9 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Journal Project.");
 
-        List<string> prompts = new List<string>();
-        prompts.Add("Who was the most interesting person I interacted with today?");
-        prompts.Add("What was the best part of my day?");
-        prompts.Add("How did I see the hand of the Lord in my life today?");
-        prompts.Add("What was the strongest emotion I felt today?");
-        prompts.Add("If I had one thing I could do over today, what would it be?");
-        prompts.Add("State one thing you are grateful for?");
-
-        Random randomGenerator = new Random();
-        int _randomNumber = randomGenerator.Next(0, 5);
+            
+        
+        Journal theJournal = new Journal();
 
         int input = -1;
 
@@ -38,21 +32,52 @@ class Program
 
             if (input == 1)
             {
-                Entry entry1 = new Entry();
+                Entry newEntry = new Entry();
+                PromptGenerator aPrompt = new PromptGenerator();
 
                 DateTime theCurrentTime = DateTime.Now;
                 string dateText = theCurrentTime.ToShortDateString();
-                entry1._date = dateText;
+                newEntry._date = dateText;
 
-                string prompt = prompts[_randomNumber];
-                entry1._prompt = prompt;
-                Console.WriteLine(prompt);
+                newEntry._promptText = aPrompt.GetRandomPrompt();
+                Console.WriteLine(newEntry._promptText);
 
                 Console.Write("> ");
-                entry1._response = Console.ReadLine();
+                newEntry._entryText = Console.ReadLine();
 
-                Journal 
+                theJournal.AddEntry(newEntry);
             }
+
+            else if (input == 2)
+            {
+                theJournal.DisplayAll();
+            }
+
+            else if (input == 3)
+            {
+                Console.Write("Load(Filename): ");
+                string file = Console.ReadLine();
+                theJournal.LoadFromFile(file);
+            }
+
+            else if (input == 4)
+            {
+                Console.Write("Save to(Filename): ");
+                string file = Console.ReadLine();
+                theJournal.SaveToFile(file);
+            }
+
+            else if (input == 5)
+            {
+                Console.WriteLine("Come agian soon!");
+                break;
+            }
+
+            else
+            {
+                Console.WriteLine("Invalid input.");
+            }
+
         }
 
 
