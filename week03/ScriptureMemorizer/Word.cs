@@ -6,6 +6,7 @@ public class Word
     public Word(string text)
     {
         _text = text;
+        _isHidden = true;
     }
 
     public void Hide()
@@ -25,6 +26,7 @@ public class Word
 
     public string GetDisplayText()
     {
+
         return _text;
     }
 }
